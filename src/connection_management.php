@@ -6,7 +6,7 @@ use Hyper\Database\Drivers\Connections\SQLiteConnection;
 
 class ConnectionManagement
 {
-    private static Database $DATABASE;
+    private static $DATABASE;
     private static $_driver;
 
     public static function setDatabase($params)
@@ -15,6 +15,8 @@ class ConnectionManagement
             $params = $params['db'];
 
         self::setDriver($params);
+
+        self::$DATABASE = new Database(self::getDriver());
     }
 
     public static function setDriver($params)
