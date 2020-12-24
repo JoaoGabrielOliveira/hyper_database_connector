@@ -1,0 +1,16 @@
+{
+    "name": "hypercode/database_interface",
+    "description": "Database Interfaces",
+    "type": "library",
+    "license": "none",
+    "authors": [
+        {
+            "name": "JoaoGabrielOliveira",
+            "email": "joaog.conceicao@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4"
+    }
+}
