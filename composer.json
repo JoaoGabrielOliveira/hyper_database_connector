@@ -1,5 +1,5 @@
 {
-    "name": "hypercode/database_interface",
+    "name": "hypercode/database_connector",
     "description": "Database Interfaces",
     "type": "library",
     "license": "none",
