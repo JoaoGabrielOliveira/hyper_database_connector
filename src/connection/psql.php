@@ -1,11 +1,9 @@
 <?php
-namespace Hyper\Database\Drivers\Connetion;
-
-use Hyper\Database\DatabaseConnection as Connection;
-
+namespace Hyper\Database\Drivers\Connections;
+use Hyper\Database\Drivers\DatabaseConnection;
 use PDOException;
 
-class PostgreSQLConnection implements Connection
+class PostgreSQLConnection implements DatabaseConnection
 {
     public $user, $password;
     public $connection_params;

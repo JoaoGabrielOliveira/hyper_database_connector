@@ -9,6 +9,13 @@
             "email": "joaog.conceicao@hotmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Hyper\\Database\\Drivers\\":["src"],
+            "Hyper\\Database\\Drivers\\Connections":["src/Connections"],
+            "Hyper\\Database\\Drivers\\Operations":["src/operations"]
+        }
+    },
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4"

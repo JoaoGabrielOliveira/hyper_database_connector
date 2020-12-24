@@ -1,15 +1,9 @@
 <?php
-namespace Hyper\Database\Drivers;
-
-use Hyper\Database\DatabaseConnection as Connection;
-use Hyper\Database\DatabaseOperations as Operations;
-use Hyper\Database\DbConnection;
-use Hyper\Database\CRUD\select;
-
+namespace Hyper\Database\Drivers\Connections;
+use Hyper\Database\Drivers\DatabaseConnection;
 use PDOException;
-use PDO;
 
-class SQLiteConnection implements Connection
+class SQLiteConnection implements DatabaseConnection
 {
     public $connection_params;
     public function __construct($params)

@@ -1,6 +1,5 @@
 <?php
-
-namespace Hyper\Database;
+namespace Hyper\Database\Drivers;
 
 interface DatabaseOperations
 {
