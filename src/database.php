@@ -18,7 +18,8 @@ class Database
 
     public function prepare_statement(string $query)
     {
-        return $this->connect->prepare($query);
+        $connection = $this->connect();
+        return $connection->prepare($query);
     }
 
 }
