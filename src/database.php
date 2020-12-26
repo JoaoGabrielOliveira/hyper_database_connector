@@ -1,6 +1,6 @@
 <?php
-namespace Hyper;
-use Hyper\Database\Drivers\DatabaseConnection;
+namespace Hyper\Record;
+use Hyper\Record\Connection\DatabaseConnection;
 
 class Database
 {

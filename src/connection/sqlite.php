@@ -1,6 +1,6 @@
 <?php
-namespace Hyper\Database\Drivers\Connections;
-use Hyper\Database\Drivers\DatabaseConnection;
+namespace Hyper\Record\Connection\Drivers;
+use Hyper\Record\Connection\DatabaseConnection;
 use PDOException;
 
 class SQLiteConnection implements DatabaseConnection
