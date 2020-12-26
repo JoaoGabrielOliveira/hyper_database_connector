@@ -1,8 +1,8 @@
 <?php
-namespace Hyper\Database;
-use Hyper\Database;
-use Hyper\Database\Drivers\Connections\PostgreSQLConnection;
-use Hyper\Database\Drivers\Connections\SQLiteConnection;
+namespace Hyper\Record\Connection;
+use Hyper\Record\Database;
+use Hyper\Record\Connection\Drivers\PostgreSQLConnection;
+use Hyper\Record\Connection\Drivers\SQLiteConnection;
 
 class ConnectionManagement
 {

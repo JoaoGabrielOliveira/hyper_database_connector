@@ -18,14 +18,6 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.4",
-        "hypercode/query": "dev-main"
-    },
-
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/JoaoGabrielOliveira/hyper_query.git"
-        }
-    ]
+        "php": ">=7.4"
+    }
 }
