@@ -15,11 +15,4 @@ class Database
     {
         return $this->driver_connection->connect();
     }
-
-    public function prepare_statement(string $query)
-    {
-        $connection = $this->connect();
-        return $connection->prepare($query);
-    }
-
 }
