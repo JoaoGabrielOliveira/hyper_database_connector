@@ -6,7 +6,7 @@ use PDOException;
 class SQLiteConnection implements DatabaseConnection
 {
     public $connection_params;
-    public function __construct($params)
+    public function __construct($params, array $options = [])
     {
         $this->connection_params = "sqlite" . ":" . $params['path'];
     }

@@ -5,9 +5,9 @@ use PDOException;
 
 class PostgreSQLConnection implements DatabaseConnection
 {
-    public $user, $password;
+    public $user, $password, $options;
     public $connection_params;
-    public function __construct($params)
+    public function __construct($params, array $options = [])
     {
         $this->connection_params = "pgsql" .
         ':dbname=' . $params['name'] .
@@ -22,7 +22,7 @@ class PostgreSQLConnection implements DatabaseConnection
     {
         try
         {
-            return new \PDO($this->connection_params,$this->user, $this->password);
+            return new \PDO($this->connection_params,$this->user, $this->password, $this->options);
         }
 
         catch(PDOException $e)
