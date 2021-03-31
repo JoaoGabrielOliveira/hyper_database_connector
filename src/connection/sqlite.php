@@ -5,17 +5,18 @@ use PDOException;
 
 class SQLiteConnection implements DatabaseConnection
 {
-    public $connection_params;
-    public function __construct($params, array $options = [])
+    public $ConnectionParams;
+    public function __construct(){}
+    public function setByParams($params, array $options = [])
     {
-        $this->connection_params = "sqlite" . ":" . $params['path'];
+        $this->ConnectionParams = "sqlite" . ":" . $params['path'];
     }
 
     public function connect()
     {
         try 
         {
-            $connection = new \PDO($this->connection_params);
+            $connection = new \PDO($this->ConnectionParams);
             return $connection;
         }
         catch(PDOException $e)
