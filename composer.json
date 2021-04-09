@@ -11,9 +11,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "Hyper\\":["src"],
-            "Hyper\\Database\\":["src"],
-            "Hyper\\Database\\Drivers\\Connections\\":["src/Connections"]
+            "Hyper\\Record\\":["src"],
+            "Hyper\\Record\\Connection\\":["src"]
+
         }
     },
     "minimum-stability": "dev",

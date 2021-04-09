@@ -15,4 +15,9 @@ class Database
     {
         return $this->driver_connection->connect();
     }
+
+    public function close()
+    {
+        return $this->driver_connection->close();
+    }
 }

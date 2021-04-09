@@ -1,13 +1,11 @@
 <?php
 namespace Hyper\Record\Connection\Drivers;
 use Hyper\Record\Connection\DatabaseConnection;
-use PDOException;
 
-class PostgreSQLConnection implements DatabaseConnection
+class PostgreSQLConnection extends DatabaseConnection
 {
     public $User, $Password, $Options;
-    public $ConnectionParams;
-    public function __construct(){}
+    
     public function setByParams($params, array $options = [])
     {
         $this->connection_params = "pgsql" .
@@ -19,16 +17,17 @@ class PostgreSQLConnection implements DatabaseConnection
         $this->password = $params['password'];
     }
 
-    public function connect()
+    public function connect():\PDO
     {
         try
         {
-            return new \PDO($this->ConnectionParams,$this->User, $this->Password, $this->options);
+            $this->connection = $this->connection ?? new \PDO($this->ConnectionParams,$this->User, $this->Password, $this->options);;
+            return $this->connection;
         }
 
-        catch(PDOException $e)
+        catch(\PDOException $e)
         {
-            echo 'Conexão falhou: ' . $e->getMessage();
+            throw $e;
         }
     }
 }
