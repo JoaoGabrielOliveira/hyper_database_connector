@@ -1,8 +1,8 @@
 <?php
 namespace Hyper\Record\Connection\Drivers;
-use Hyper\Record\Connection\DatabaseConnection;
+use Hyper\Record\Driver;
 
-class PostgreSQLConnection extends DatabaseConnection
+class PostgreSQLDriver extends Driver
 {
     public $User, $Password, $Options;
     

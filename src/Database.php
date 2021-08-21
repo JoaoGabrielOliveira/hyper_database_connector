@@ -1,14 +1,14 @@
 <?php
 namespace Hyper\Record;
-use Hyper\Record\Connection\DatabaseConnection;
+use Hyper\Record\Driver;
 
 class Database
 {
     private $driver_connection;
 
-    public function __construct(DatabaseConnection $connection)
+    public function __construct(Driver $driver)
     {
-        $this->driver_connection = $connection;
+        $this->driver_connection = $driver;
     }
 
     public function connect()
@@ -18,6 +18,6 @@ class Database
 
     public function close()
     {
-        return $this->driver_connection->close();
+        return $this->driver_connection->closeConnection();
     }
 }

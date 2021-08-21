@@ -1,5 +1,5 @@
-## interface Hyper/Record/DatabaseConnection
-Interface to create your connections models
+## interface Hyper/Record/Driver
+Interface to create your database drivers
 ```php
 public function __construct($params, array $options = []);
 public function connect();

@@ -1,7 +1,7 @@
 <?php
-namespace Hyper\Record\Connection;
+namespace Hyper\Record;
 
-abstract class DatabaseConnection
+abstract class Driver
 {
     public $connectionParams;
     public $connection;

@@ -1,8 +1,8 @@
 <?php
 namespace Hyper\Record\Connection\Drivers;
-use Hyper\Record\Connection\DatabaseConnection;
+use Hyper\Record\Driver;
 
-class SQLiteConnection extends DatabaseConnection
+class SQLiteDriver extends Driver
 {
     public function setByParams($params, array $options = [])
     {
